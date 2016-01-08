@@ -12,4 +12,4 @@ RUN touch /var/log/cron.log
 RUN touch /var/log/quota.log
  
 # Run the command on container startup
-CMD cron && tail -f /var/log/cron.log & python /var/www/quota_mod/run.py
+CMD cron & python /var/www/quota_mod/run.py

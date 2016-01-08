@@ -1,3 +1,2 @@
-* * * * * root echo "Hello world" >> /var/log/cron.log 2>&1
-5 * * * * root python /var/www/quota_mod/quota_dump.py >> /var/log/cron.log 2>&1
+* */1 * * * root python /var/www/quota_mod/dump_quotas.py >> /var/log/cron.log 2>&1
 # An empty line is required at the end of this file for a valid cron file.
