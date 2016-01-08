@@ -9,6 +9,7 @@ RUN chmod 0644 /etc/cron.d/hello-cron
  
 # Create the log file to be able to run tail
 RUN touch /var/log/cron.log
+RUN touch /var/log/quota.log
  
 # Run the command on container startup
-CMD cron && tail -f /var/log/cron.log
+CMD cron && tail -f /var/log/cron.log & python /var/www/quota_mod/run.py
